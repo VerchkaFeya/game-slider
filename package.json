@@ -1,0 +1,19 @@
+{
+  "name": "lesta-games-slider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "style": "sass --watch sass/style.scss style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VerchkaFeya/lesta-games-slider.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VerchkaFeya/lesta-games-slider/issues"
+  },
+  "homepage": "https://github.com/VerchkaFeya/lesta-games-slider#readme"
+}
