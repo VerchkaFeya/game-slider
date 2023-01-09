@@ -1,0 +1,76 @@
+.slide {
+  width: 100%;
+  position: relative;
+
+  &__flag-image {
+    width: 100%;
+    height: 100%;
+    background-image: url(../../assets/img/ussr-flag.png);
+    background-repeat: no-repeat;
+    background-size: 42vw;
+    background-position: top 0 left 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  &__background {
+    width: 75%;
+    margin-left: auto;
+    background-image: url(../../assets/img/bg.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top -17px right 0;
+    position: relative;
+    padding: 8.12vw 0 0 0;
+  }
+
+  &__content {
+    @include flex(center, center, column);
+    max-width: 1328px;
+    margin: 0 0 0 42px;
+    position: relative;
+  }
+
+  &__country-name {
+    margin: 0;
+    @include font(9.1vw, 117%, 900);
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px $text-color;
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+
+    &_gb,
+    &_czech {
+      top: 7%;
+      font-size: 6vw;
+    }
+  }
+
+  &__tanks-image {
+    width: 100%;
+    z-index: 10;
+    margin-left: 0 auto;
+  }
+
+  &__tanks-amount {
+    margin: 0;
+    @include font(9.1vw, 117%, 700);
+    z-index: 10;
+    cursor: default;
+    margin: -15% 0 0 0;
+  }
+
+  &__subtitle {
+    @include font(16px, 19px, 700);
+    opacity: 0.5;
+    margin: -2.2% 0 0 0;
+  }
+
+  &__tanks-list {
+    @include font(30px, 35px, 800);
+    margin: 25px 0 0 0;
+  }
+}

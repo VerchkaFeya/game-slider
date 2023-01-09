@@ -1,0 +1,22 @@
+.tanks {
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: linear-gradient(133.28deg, #000000 0.39%, rgba(0, 0, 0, 0) 53.09%);
+    z-index: 0;
+  }
+
+  &__info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    margin: 14.1% 0 0 98px;
+  }
+}

@@ -1,0 +1,33 @@
+.button {
+  outline: none;
+  @include font(18px, 31px, 700);
+  text-transform: uppercase;
+  color: $text-color;
+  padding: 15px 51px;
+  background: $button-gradient;
+  border: 1px solid transparent;
+  border-image: linear-gradient(150deg, rgba(242, 221, 34, 1) 10%, transparent 25%);
+  border-image-slice: 1;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.51);
+  position: relative;
+  cursor: pointer;
+  z-index: 5;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    transition: opacity 0.5s linear;
+    background-image: $button-gradient-hover;
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+}

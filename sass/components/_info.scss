@@ -1,0 +1,18 @@
+.info {
+  &__title {
+    @include font(2.1vw, 118%, 800);
+    max-width: 28.8vw;
+    margin: 0 0 0 0;
+  }
+
+  &__subtitle {
+    @include font(16px, 27px, 700);
+    opacity: 0.5;
+    max-width: 257px;
+    margin: 22px 0 0 0;
+  }
+
+  &__button {
+    margin: 3.2vw 0 0 0;
+  }
+}

@@ -1,0 +1,18 @@
+//colors
+
+$background-color: #1c1b16;
+$text-color: #f9f5e1;
+$brand-color: #f25322;
+
+$button-gradient: linear-gradient(
+  180deg,
+  $brand-color 0%,
+  rgba(242, 83, 34, 0.81) 48.96%,
+  $brand-color 100%
+);
+$button-gradient-hover: linear-gradient(
+  180deg,
+  #d23e11 0%,
+  rgba(155, 47, 14, 0.81) 48.96%,
+  #cc390b 100%
+);
