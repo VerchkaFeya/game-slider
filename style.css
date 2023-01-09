@@ -449,6 +449,7 @@ input[type=radio] {
   cursor: pointer;
   z-index: 5;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 20px), calc(100% - 20px) 100%, 0 100%);
 }
 .button::before {
   content: "";
@@ -716,6 +717,7 @@ input[type=radio] {
 }
 .bar:hover::before {
   background-color: #f25322;
+  -webkit-filter: blur(40px);
   filter: blur(40px);
 }
 .bar:hover .bar__country-name {
@@ -811,6 +813,7 @@ input[type=radio] {
   transform: translateX(-50%);
   z-index: -10;
   background-color: #f25322;
+  -webkit-filter: blur(40px);
   filter: blur(40px);
 }
 @media (max-width: 800px) {
