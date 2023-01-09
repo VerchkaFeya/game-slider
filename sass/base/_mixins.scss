@@ -10,3 +10,39 @@
   align-items: $align;
   flex-direction: $direction;
 }
+
+// @mixin media-largest-desktop {
+//   @media (min-width: $desktop-largest-width) {
+//     @content;
+//   }
+// }
+
+@mixin media-large-desktop {
+  @media (max-width: $desktop-large-width) {
+    @content;
+  }
+}
+
+@mixin media-big-desktop {
+  @media (max-width: $desktop-big-width) {
+    @content;
+  }
+}
+
+@mixin media-small-desktop {
+  @media (max-width: $desktop-small-width) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media (max-width: $tablet-width) {
+    @content;
+  }
+}
+
+@mixin media-mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}

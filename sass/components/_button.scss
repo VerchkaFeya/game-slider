@@ -30,4 +30,9 @@
   &:hover::before {
     opacity: 1;
   }
+
+  @include media-small-desktop {
+    @include font(14px, 31px, 700);
+    padding: 11px 65px 9px 65px;
+  }
 }

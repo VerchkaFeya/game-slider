@@ -1,4 +1,8 @@
 .slider {
+  @include media-tablet {
+    margin: -23px 0 0 0;
+  }
+
   &__slides-wrapper {
     width: 100%;
     overflow: hidden;
@@ -7,22 +11,119 @@
   &__slides {
     width: 600%;
     display: flex;
-    transition: all 0.5s ease-in-out;
+    @extend %transition;
   }
 
   &__nav {
     margin: 60px 0 0 0;
+
+    @include media-small-desktop {
+      margin: 40px 20px 0 20px;
+    }
+
+    @include media-tablet {
+      margin: 0;
+    }
   }
 }
 
 .nav {
   @include flex(center, center);
+
+  @include media-tablet {
+    @include flex(flex-start, center);
+    padding: 40px 15px 40px 15px;
+    margin: -12px 0 0 0;
+    overflow-x: hidden;
+  }
 }
 
 .controls {
   @include flex(space-between, center);
   max-width: 985px;
   flex: 1 1 auto;
+  transition: all 0.5s ease-in-out;
+}
+
+@media (max-width: 799px) {
+  .nav {
+    width: 481px;
+    margin: 0 auto;
+  }
+  .controls {
+    justify-content: center;
+  }
+
+  #radio1:checked ~ .slider .controls {
+    margin: 0;
+  }
+
+  #radio2:checked ~ .slider .controls {
+    margin: 0 0 0 0;
+  }
+
+  #radio3:checked ~ .slider .controls {
+    margin: 0 0 0 -139px;
+  }
+
+  #radio4:checked ~ .slider .controls {
+    margin: 0 0 0 -263px;
+  }
+
+  #radio5:checked ~ .slider .controls {
+    margin: 0 0 0 -263px;
+  }
+
+  #radio6:checked ~ .slider .controls {
+    margin: 0 0 0 -263px;
+  }
+}
+
+@media (max-width: 550px) {
+  .nav {
+    width: 290px;
+    padding: 40px 10px;
+  }
+  .controls {
+    gap: 25px;
+  }
+
+  #radio1:checked ~ .slider .controls {
+    margin: 0;
+  }
+  #radio1:checked ~ .slider .bar_4 {
+    opacity: 0;
+  }
+  #radio2:checked ~ .slider .controls {
+    margin: 0 0 0 0px;
+  }
+  #radio2:checked ~ .slider .bar_4 {
+    opacity: 0;
+  }
+  #radio3:checked ~ .slider .controls {
+    margin: 0 0 0 -105px;
+  }
+  #radio3:checked ~ .slider .bar_1,
+  #radio3:checked ~ .slider .bar_5 {
+    opacity: 0;
+  }
+  #radio4:checked ~ .slider .controls {
+    margin: 0 0 0 -215px;
+  }
+  #radio4:checked ~ .slider .bar_2,
+  #radio4:checked ~ .slider .bar_6 {
+    opacity: 0;
+  }
+  #radio5:checked ~ .slider .controls {
+    margin: 0 0 0 -320px;
+  }
+  #radio6:checked ~ .slider .controls {
+    margin: 0 0 0 -320px;
+  }
+  #radio5:checked ~ .slider .bar_3,
+  #radio6:checked ~ .slider .bar_3 {
+    opacity: 0;
+  }
 }
 
 .bar {
@@ -31,6 +132,11 @@
   gap: 5px;
   cursor: pointer;
   position: relative;
+  @extend %transition;
+
+  @media (max-width: 550px) {
+    width: 80px;
+  }
 
   &::before {
     content: '';
@@ -43,12 +149,21 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -10;
+
+    @include media-tablet {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   &__country-name {
     margin: 0;
     @include font(14px, 16px, 700);
     opacity: 0.5;
+
+    @include media-small-desktop {
+      @include font(12px, 14px, 700);
+    }
   }
 
   &:hover {
@@ -68,6 +183,11 @@
   height: 70px;
   position: relative;
   z-index: 10;
+
+  @include media-tablet {
+    width: 65px;
+    height: 50;
+  }
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -100,6 +220,10 @@
   transform: scale(1.38);
   position: relative;
   z-index: 10;
+
+  @include media-tablet {
+    transform: scale(1.2);
+  }
 }
 
 #radio1:checked ~ .slider .slider__slides {
@@ -140,6 +264,11 @@
     z-index: -10;
     background-color: $brand-color;
     filter: blur(40px);
+
+    @include media-tablet {
+      width: 44px;
+      height: 44px;
+    }
   }
 
   .bar__country-name {
@@ -148,5 +277,9 @@
 
   .inside-bar {
     transform: scale(1.38);
+
+    @include media-tablet {
+      transform: scale(1.2);
+    }
   }
 }

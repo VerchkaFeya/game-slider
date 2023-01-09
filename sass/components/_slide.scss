@@ -1,6 +1,7 @@
 .slide {
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   &__flag-image {
     width: 100%;
@@ -11,6 +12,11 @@
     background-position: top 0 left 0;
     position: absolute;
     z-index: 1;
+
+    @include media-tablet {
+      background-size: 320px;
+      overflow: hidden;
+    }
   }
 
   &__background {
@@ -22,6 +28,13 @@
     background-position: top -17px right 0;
     position: relative;
     padding: 8.12vw 0 0 0;
+
+    @include media-tablet {
+      width: 100%;
+      background-size: 688px 336px;
+      background-position: top center;
+      padding: 0 0 0 0;
+    }
   }
 
   &__content {
@@ -29,6 +42,10 @@
     max-width: 1328px;
     margin: 0 0 0 42px;
     position: relative;
+
+    @include media-tablet {
+      margin: 0;
+    }
   }
 
   &__country-name {
@@ -42,17 +59,50 @@
     transform: translateX(-50%);
     z-index: 5;
 
+    @include media-small-desktop {
+      font-size: 8vw;
+      top: 7%;
+    }
+
+    @include media-tablet {
+      @include font(70px, 82px, 900);
+      letter-spacing: 0.07em;
+      top: 103px;
+    }
+
     &_gb,
     &_czech {
       top: 7%;
       font-size: 6vw;
+      @include media-small-desktop {
+        font-size: 6vw;
+        top: 10%;
+      }
+
+      @include media-tablet {
+        font-size: 9.5vw;
+        top: 25%;
+      }
     }
+
+    // &_fr,
+    // &_ger {
+    //   @include media-tablet {
+    //     font-size: 15vw;
+    //     top: 30%;
+    //   }
+    // }
   }
 
   &__tanks-image {
     width: 100%;
     z-index: 10;
     margin-left: 0 auto;
+
+    @include media-tablet {
+      width: 635px;
+      margin: 82px 0 0 0;
+    }
   }
 
   &__tanks-amount {
@@ -61,16 +111,35 @@
     z-index: 10;
     cursor: default;
     margin: -15% 0 0 0;
+
+    @include media-tablet {
+      @include font(70px, 82px, 700);
+      margin: -75px 0 0 0;
+    }
   }
 
   &__subtitle {
     @include font(16px, 19px, 700);
     opacity: 0.5;
     margin: -2.2% 0 0 0;
+
+    @include media-tablet {
+      margin: -10px 0 0 0;
+      @include font(12px, 14px, 700);
+    }
   }
 
   &__tanks-list {
     @include font(30px, 35px, 800);
     margin: 25px 0 0 0;
+
+    @include media-small-desktop {
+      @include font(20px, 120%, 800);
+    }
+
+    @include media-tablet {
+      @include font(18px, 21px, 800);
+      margin: 15px 0 0 0;
+    }
   }
 }

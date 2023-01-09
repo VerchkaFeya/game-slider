@@ -1,5 +1,4 @@
 //colors
-
 $background-color: #1c1b16;
 $text-color: #f9f5e1;
 $brand-color: #f25322;
@@ -16,3 +15,11 @@ $button-gradient-hover: linear-gradient(
   rgba(155, 47, 14, 0.81) 48.96%,
   #cc390b 100%
 );
+
+// width
+
+$desktop-large-width: 1920px;
+$desktop-big-width: 1440px;
+$desktop-small-width: 1024px;
+$tablet-width: 800px;
+$mobile-width: 320px;

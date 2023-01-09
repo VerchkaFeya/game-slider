@@ -1,8 +1,26 @@
 .info {
+  @include media-tablet {
+    @include flex(center, center, column);
+    text-align: center;
+  }
+
   &__title {
-    @include font(2.1vw, 118%, 800);
+    @include font(40px, 47px, 800);
     max-width: 28.8vw;
     margin: 0 0 0 0;
+
+    @include media-large-desktop {
+      @include font(2.1vw, 118%, 800);
+    }
+
+    @include media-small-desktop {
+      @include font(18px, 21px, 800);
+    }
+
+    @include media-tablet {
+      text-align: center;
+      min-width: 260px;
+    }
   }
 
   &__subtitle {
@@ -10,9 +28,21 @@
     opacity: 0.5;
     max-width: 257px;
     margin: 22px 0 0 0;
+
+    @include media-small-desktop {
+      @include font(12px, 19px, 700);
+      margin: 10px 0 0 0;
+    }
+    @include media-tablet {
+      width: 200px;
+    }
   }
 
   &__button {
     margin: 3.2vw 0 0 0;
+
+    @include media-tablet {
+      margin: 25px 0 0 0;
+    }
   }
 }

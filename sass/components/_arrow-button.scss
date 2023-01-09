@@ -6,6 +6,9 @@
   z-index: 10;
   cursor: pointer;
   position: relative;
+  @include media-small-desktop {
+    display: none;
+  }
 
   &::after {
     content: '';
@@ -29,11 +32,17 @@
   }
 
   &_prev {
-    margin: 0 74px 0 0;
+    margin: 0 74px 0 20px;
+    @include media-large-desktop {
+      margin: 0 5vw 0 20px;
+    }
   }
 
   &_next {
-    margin: 0 0 0 74px;
+    margin: 0 20px 0 74px;
     transform: rotate(180deg);
+    @include media-large-desktop {
+      margin: 0 20px 0 5vw;
+    }
   }
 }
