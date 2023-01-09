@@ -14,12 +14,7 @@ body {
 .wrapper {
   max-width: 1920px;
   margin: 0 auto;
-  // background-color: red;
   position: relative;
-
-  @include media-tablet {
-    // padding: 0 15px;
-  }
 }
 
 input[type='radio'] {

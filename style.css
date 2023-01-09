@@ -335,6 +335,7 @@ body {
   margin: 0 auto;
   position: relative;
 }
+
 input[type=radio] {
   visibility: hidden;
   position: absolute;

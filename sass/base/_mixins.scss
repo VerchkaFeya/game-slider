@@ -11,12 +11,6 @@
   flex-direction: $direction;
 }
 
-// @mixin media-largest-desktop {
-//   @media (min-width: $desktop-largest-width) {
-//     @content;
-//   }
-// }
-
 @mixin media-large-desktop {
   @media (max-width: $desktop-large-width) {
     @content;
@@ -37,12 +31,6 @@
 
 @mixin media-tablet {
   @media (max-width: $tablet-width) {
-    @content;
-  }
-}
-
-@mixin media-mobile {
-  @media (max-width: $mobile-width) {
     @content;
   }
 }
