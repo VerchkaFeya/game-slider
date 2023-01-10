@@ -169,6 +169,7 @@
   &:hover {
     &::before {
       background-color: $brand-color;
+      -webkit-filter: blur(40px);
       filter: blur(40px);
     }
 
@@ -263,6 +264,7 @@
     transform: translateX(-50%);
     z-index: -10;
     background-color: $brand-color;
+    -webkit-filter: blur(40px);
     filter: blur(40px);
 
     @include media-tablet {
