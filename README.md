@@ -1,4 +1,4 @@
-### Тестовое задание для вакансии Junior Web Master / Frontend Developer в Lesta Games.
+### Слайдер для игры в танки.
 
 Deploy: https://verchkafeya.github.io/lesta-games-slider/
 
@@ -16,7 +16,6 @@ Deploy: https://verchkafeya.github.io/lesta-games-slider/
     + Правильное наименование классов и структура папок
     + Разбить стили на компоненты (sass/scss)
     + Плавная анимация ховеров и смены слайдов
-    + Результат выложить на git
 
 Ссылка на макет:
 https://www.figma.com/file/jpFykT8lCPeW4NSPRIhdNC/Lesta-Games-Slider?t=GPgHKdG9sFF7hJeA-0
