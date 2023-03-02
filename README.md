@@ -1,6 +1,6 @@
 ### Слайдер для игры в танки.
 
-Deploy: https://verchkafeya.github.io/lesta-games-slider/
+Demo: https://verchkafeya.github.io/game-slider/
 
 Задача - сверстать слайдер со следующими требованиями:
 
